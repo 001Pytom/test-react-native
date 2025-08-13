@@ -18,7 +18,10 @@ const Home = () => {
         <Text>This is a box</Text>
       </View>
 
-      <Link href="/about">About</Link>
+      <Link href="/about" style={styles.link}>
+        About
+      </Link>
+      <Link href="/contact">contact</Link>
     </View>
   );
 };
@@ -49,5 +52,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     boxShadow:
       "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+  },
+  link: {
+    marginVertical: 3,
+    borderBottomWidth: 1,
+    fontWeight: "bold",
+    marginTop: 20,
   },
 });
