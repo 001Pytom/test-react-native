@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import myImg from "../assets/img/YUSUF.jpg";
+import { Link } from "expo-router";
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
       <View style={styles.box}>
         <Text>This is a box</Text>
       </View>
+
+      <Link href="/about">About</Link>
     </View>
   );
 };
