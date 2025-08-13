@@ -20,10 +20,10 @@ const Home = () => {
       <Spacer height={20} />
       <ThemedText>Reading list App</ThemedText>
 
-      <Link href="/about" style={styles.link}>
-        About
+      <Link href="/login" style={styles.link}>
+        Login
       </Link>
-      <Link href="/contact">contact</Link>
+      <Link href="/register">Register</Link>
     </ThemedView>
   );
 };
