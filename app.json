@@ -1,5 +1,6 @@
 {
   "expo": {
+     "scheme": "testreactnativeapp", 
     "name": "test_react_native",
     "slug": "test_react_native",
     "version": "1.0.0",
@@ -24,6 +25,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
