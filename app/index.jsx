@@ -23,6 +23,9 @@ const Home = () => {
       <Link href="/login" style={styles.link}>
         Login
       </Link>
+      <Link href="/profile" style={styles.link}>
+        Profile
+      </Link>
       <Link href="/register">Register</Link>
     </ThemedView>
   );
