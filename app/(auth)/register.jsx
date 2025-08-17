@@ -1,4 +1,5 @@
 import {
+  Alert,
   Keyboard,
   StyleSheet,
   Text,
@@ -12,12 +13,20 @@ import Spacer from "../../components/Spacer";
 import ThemedButton from "../../components/ThemedButton";
 import ThemedTextInput from "../../components/ThemedTextInput";
 import { useState } from "react";
+import { useUser } from "../../hooks/useUser";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { register } = useUser();
+
   const handleSubmit = async () => {
-    console.log("register form submitted");
+    try {
+      await register(email, password);
+      // console.log("register Successfull", email, password);
+    } catch (error) {
+      Alert.alert(error.message);
+    }
   };
 
   return (

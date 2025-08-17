@@ -1,4 +1,5 @@
 import {
+  Alert,
   Keyboard,
   StyleSheet,
   Text,
@@ -11,13 +12,21 @@ import { Link } from "expo-router";
 import ThemedButton from "../../components/ThemedButton";
 import ThemedTextInput from "../../components/ThemedTextInput";
 import { useState } from "react";
+import { useUser } from "../../hooks/useUser";
 
 const Login = () => {
+  const { login } = useUser();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  function handleSubmit() {
-    console.log("login Successfull", email, password);
-  }
+
+  const handleSubmit = async () => {
+    try {
+      await login(email, password);
+      // console.log("login Successfull", email, password);
+    } catch (error) {
+      Alert.alert(error.message);
+    }
+  };
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
