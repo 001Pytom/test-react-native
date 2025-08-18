@@ -14,19 +14,22 @@ const Home = () => {
 
       <ThemedLogo style={styles.img} />
 
-      <ThemedText style={styles.title} title={true}>
-        The Number one
-      </ThemedText>
       <Spacer height={20} />
-      <ThemedText>Reading list App</ThemedText>
+      <ThemedText style={styles.title} title={true}>
+        Reading list App
+      </ThemedText>
 
       <Link href="/login" style={styles.link}>
-        Login
+        <ThemedText>Login</ThemedText>
       </Link>
+
+      <Link href="/register" style={styles.link}>
+        <ThemedText>Register</ThemedText>
+      </Link>
+
       <Link href="/profile" style={styles.link}>
-        Profile
+        <ThemedText>Profile</ThemedText>
       </Link>
-      <Link href="/register">Register</Link>
     </ThemedView>
   );
 };
